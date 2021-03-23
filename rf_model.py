@@ -64,13 +64,15 @@ def train_model():
     con.close()
 
 def predict(gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status):
-      Test = pd.DataFrame([[gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]])
+      rf_pipeline.predict_proba([[gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]])
+      
+"""       Test = pd.DataFrame([[gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]])
       exp = explainer.explain_instance(
       data_row=Test.iloc[0], 
       predict_fn=rf_pipeline.predict_proba
       )
 
-      exp.show_in_notebook(show_table=True) # what to do here???? exp Class? to be continued...
+      exp.show_in_notebook(show_table=True) # what to do here???? exp Class? to be continued... """
       
       
       
