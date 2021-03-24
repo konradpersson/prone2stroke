@@ -1,13 +1,12 @@
 import numpy as np 
-import pandas as pd 
-import matplotlib.pyplot as plt
-%matplotlib inline
-import seaborn as sns
+import pandas as pd
+import sqlite3
+import matplotlib.pyplot as pltpippip
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.preprocessing import StandardScaler,LabelEncoder
 from imblearn.over_sampling import SMOTE #needs installing of imbalanced-learn
-import scikitplot as skplt #needs installing of scikit-plot
+#import scikitplot as skplt #needs installing of scikit-plot
 import os
 from sklearn import metrics
 from sklearn.pipeline import Pipeline
@@ -18,19 +17,19 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 def train_model():
-    con = sqlite3.connect('prone-to-stroke.db')
+    con = sqlite3.connect('prone-to-stroke-dataset.db')
 
     #df 
-    df = pd.read_sql_quert('SELECT * FROM dataset')
+    df = pd.read_sql_query('SELECT * FROM dataset', con)
 
     # Encoding categorical values 
     df['gender'] = df['gender'].replace({'Male':0,'Female':1,'Other':-1}).astype(np.uint8)
-    df['Residence_type'] = df['Residence_type'].replace({'Rural':0,'Urban':1}).astype(np.uint8)
+    df['residence_type'] = df['residence_type'].replace({'Rural':0,'Urban':1}).astype(np.uint8)
     df['work_type'] = df['work_type'].replace({'Private':0,'Self-employed':1,'Govt_job':2,'children':-1,'Never_worked':-2}).astype(np.uint8)
     df['smoking_status'] = df['smoking_status'].replace({'smokes':2,'formerly smoked':1,'never smoked':0}).astype(np.uint8)
 
     #Feature Scaling 
-    X  = df[['gender','age','work_type','Residence_type','avg_glucose_level','bmi', 'smoking_status']]
+    X  = df[['gender','age','work_type','residence_type','avg_glucose_level','bmi', 'smoking_status']]
     y = df['stroke']
 
     #Splitting into train and test 
@@ -62,8 +61,8 @@ def train_model():
 
     con.close()
 
-def predict(gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status):
-      rf_pipeline.predict_proba([[gender, age, work_type, Residence_type, avg_glucose_level, bmi,smoking_status]])
+def predict(gender, age, hypertension, heart_disease,ever_married,work_type,residence_type,avg_glucose_level,bmi,smoking_status):
+      rf_pipeline.predict_proba([[gender, age, work_type, residence_type, avg_glucose_level, bmi,smoking_status]])
       
 """       Test = pd.DataFrame([[gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]])
       exp = explainer.explain_instance(
