@@ -27,11 +27,10 @@ def train_model():
     df['gender'] = df['gender'].replace({'Male':0,'Female':1,'Other':-1}).astype(np.uint8)
     df['Residence_type'] = df['Residence_type'].replace({'Rural':0,'Urban':1}).astype(np.uint8)
     df['work_type'] = df['work_type'].replace({'Private':0,'Self-employed':1,'Govt_job':2,'children':-1,'Never_worked':-2}).astype(np.uint8)
-    df['ever_married'] = df['ever_married'].replace({'Yes':1, 'No':0}).astype(np.uint8)
     df['smoking_status'] = df['smoking_status'].replace({'smokes':2,'formerly smoked':1,'never smoked':0}).astype(np.uint8)
 
     #Feature Scaling 
-    X  = df[['gender','age','hypertension','heart_disease','ever_married','work_type','Residence_type','avg_glucose_level','bmi', 'smoking_status']]
+    X  = df[['gender','age','work_type','Residence_type','avg_glucose_level','bmi', 'smoking_status']]
     y = df['stroke']
 
     #Splitting into train and test 
@@ -64,7 +63,7 @@ def train_model():
     con.close()
 
 def predict(gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status):
-      rf_pipeline.predict_proba([[gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]])
+      rf_pipeline.predict_proba([[gender, age, work_type, Residence_type, avg_glucose_level, bmi,smoking_status]])
       
 """       Test = pd.DataFrame([[gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status]])
       exp = explainer.explain_instance(
