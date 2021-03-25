@@ -19,7 +19,6 @@
 export default {
     data() {
         return {
-            : '',
             gender: '',
             age: '',
             hypertension: '',
