@@ -1,4 +1,4 @@
-from regression_model import train_model, predict
+from rf_model import train_model , predict
 from sanic import Sanic, response as res
 
 train_model()
@@ -16,4 +16,4 @@ async def predict_click(req):
 
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(port=5000) 
