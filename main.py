@@ -3,7 +3,7 @@ from sanic import Sanic, response as res
 
 train_model()
 
-pythonapp = Sanic('app')
+app = Sanic('app')
 
 @app.post('/api/predict')
 
