@@ -27,7 +27,16 @@ export default {
         async predict() {
             let values = {
                 age: this.age,
-                income: this.income
+                gender: this.gender,
+                age: this.age,
+                hypertension: this.hypertension,
+                heart_disease: this.heart_disease,
+                ever_married: this.ever_married,
+                work_type: this.work_type,
+                residence_type: this.residence_type,
+                avg_glucose_level: this.avg_glucose_level,
+                bmi: this.bmi,
+                smoking_status: this.smoking_status
             }
 
             let res = await fetch('api/predict', {
