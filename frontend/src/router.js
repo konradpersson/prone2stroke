@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
-import Home from ".views/Home.vue"
-import About from ".views/About.vue"
+import Home from "./views/Home.vue"
+import Strokeinput from "./views/StrokeInput.vue"
 
 const routes = [
     {
@@ -9,9 +9,9 @@ const routes = [
         component: Home
     },
     {
-        name: 'About',
-        path: '/about',
-        component: About
+        name: 'Strokeinput',
+        path: '/strokeinput',
+        component: Strokeinput
     },
 
 ]

@@ -1,6 +1,8 @@
 <template>
   <main>
-      <h1>Home Vue Page</h1>
+      <h1>Charts</h1>
+      <img alt="Mixed Charts" src="../assets/mixed-charts.png" />
+      <img alt="Mixed Charts" src="../assets/bubble-charts.png" />
   </main>
 </template>
 
