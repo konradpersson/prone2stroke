@@ -1,8 +1,16 @@
 <template>
     <form @submit.prevent="predict">
         <h3>Testing probability prediction</h3>
+        <input v-model="gender" type="text" placeholder="gender"/>
         <input v-model="age" type="text" placeholder="age"/>
-        <input v-model="income" type="text" placeholder="income"/>
+        <input v-model="hypertension" type="text" placeholder="hypertension"/>
+        <input v-model="heart_disease" type="text" placeholder="heart-disease"/>
+        <input v-model="ever_married" type="text" placeholder="ever-married"/>
+        <input v-model="work_type" type="text" placeholder="work-type"/>
+        <input v-model="residence_type" type="text" placeholder="residence-type"/>
+        <input v-model="avg_glucose_level" type="text" placeholder="avg-glucose-level"/>
+        <input v-model="bmi" type="text" placeholder="income"/>
+        <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
         <button>Submit</button>
     </form>
 </template>
