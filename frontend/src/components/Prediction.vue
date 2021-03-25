@@ -19,14 +19,23 @@
 export default {
     data() {
         return {
+            : '',
+            gender: '',
             age: '',
-            income: '',
+            hypertension: '',
+            heart_disease: '',
+            ever_married: '',
+            work_type: '',
+            residence_type: '',
+            avg_glucose_level: '',
+            bmi: '',
+            smoking_status: ''
+
         }
     },
     methods: {
         async predict() {
             let values = {
-                age: this.age,
                 gender: this.gender,
                 age: this.age,
                 hypertension: this.hypertension,
