@@ -11,14 +11,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Prediction from './components/Prediction.vue'
 import MainMenu from "./components/MainMenu.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Prediction,
     MainMenu
   },
