@@ -24,23 +24,21 @@ def train_model():
     df['work_type'] = df['work_type'].replace({'Private':0,'Self-employed':1,'Govt_job':2,'children':-1,'Never_worked':-2}).astype(np.uint8)
     df['smoking_status'] = df['smoking_status'].replace({'smokes':2,'formerly smoked':1,'never smoked':0}).astype(np.uint8)
 
-    #Feature Scaling 
+
+    #Feature Scaling (removing columns of lowest importance since it gives the best result)
     X  = df[['gender','age','work_type','residence_type','avg_glucose_level','bmi', 'smoking_status']]
     y = df['stroke']
 
-    #Splitting into train and test 
+    # Splitting into train and test 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
 
-    #fixing biased data 
+
+    # Fixing biased data 
     oversample = SMOTE()
     X_train_resh, y_train_resh = oversample.fit_resample(X_train, y_train.ravel())
     
-    #Random Forest Pipeline
-    RandomForestPipeline=Pipeline([('myscaler',MinMaxScaler()),
-                     ('mypca',PCA(n_components=3)),
-                     ('randomforest_classifier',RandomForestClassifier())])
-
-    #Random forest Classifier 
+    
+    # Random forest Classifier 
     model = RandomForestClassifier(max_features=2,n_estimators=100,bootstrap=True)
 
     model.fit(X_train_resh,y_train_resh)
@@ -58,7 +56,7 @@ def train_model():
 
     con.close()
 
-def predict(gender, age, hypertension, heart_disease,ever_married,work_type,residence_type,avg_glucose_level,bmi,smoking_status):
+def predict(gender, age, work_type,residence_type,avg_glucose_level,bmi,smoking_status):
       RandomForestPipeline.predict_proba([[gender, age, work_type, residence_type, avg_glucose_level, bmi,smoking_status]])
       
           #probability = probability_of_stroke[0, 1]
