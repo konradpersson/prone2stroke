@@ -1,16 +1,10 @@
 
+# Importing Packages
 import sqlite3
-import warnings
-warnings.filterwarnings('ignore')
-#importing packages
 import numpy as np 
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.decomposition import PCA
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from imblearn.over_sampling import SMOTE #needs installing of imbalanced-learn
 from sklearn.metrics import classification_report, confusion_matrix
@@ -21,12 +15,12 @@ from sklearn.model_selection import train_test_split,cross_val_score
 def train_model():
     con = sqlite3.connect('prone-to-stroke-dataset.db')
 
-    #df 
+    # Creating dataframe from Database 
     df = pd.read_sql_query('SELECT * FROM dataset', con)
 
     # Encoding categorical values 
     df['gender'] = df['gender'].replace({'Male':0,'Female':1,'Other':-1}).astype(np.uint8)
-    df['residence_type'] = df['residence_type'].replace({'Rural':0,'Urban':1}).astype(np.uint8)
+    df['Residence_type'] = df['Residence_type'].replace({'Rural':0,'Urban':1}).astype(np.uint8)
     df['work_type'] = df['work_type'].replace({'Private':0,'Self-employed':1,'Govt_job':2,'children':-1,'Never_worked':-2}).astype(np.uint8)
     df['smoking_status'] = df['smoking_status'].replace({'smokes':2,'formerly smoked':1,'never smoked':0}).astype(np.uint8)
 
@@ -35,7 +29,7 @@ def train_model():
     y = df['stroke']
 
     #Splitting into train and test 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=4)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
 
     #fixing biased data 
     oversample = SMOTE()
