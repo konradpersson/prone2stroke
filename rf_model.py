@@ -52,14 +52,14 @@ def train_model():
 
 def predict(gender, age, work_type,residence_type,avg_glucose_level,bmi,smoking_status):
     
-    #gender, age, hypertension, heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_s
-    model.predict_proba([[gender, age, work_type,residence_type,avg_glucose_level,bmi,smoking_status]])
+    #gender, age,work_type,Residence_type,avg_glucose_level,bmi,smoking_s
+    probability_of_stroke = model.predict_proba([[gender, age, work_type,residence_type,avg_glucose_level,bmi,smoking_status]])
      
       
-    #probability = probability_of_stroke[0, 1]
+    probability = probability_of_stroke[0, 1]
     
-    #prediction = True if probability > 0.5 else False
+    prediction = True if probability > 0.5 else False
     
-    #return { "willGetStroke": prediction, "probability": probability }
+    return { "willGetStroke": prediction, "probability": probability }
       
       

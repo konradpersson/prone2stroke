@@ -4,7 +4,7 @@ import { createStore } from 'vuex'
 // this.$store.state.prediction
 const state = {
     prediction: {
-        willClick: false,
+        willGetStroke: false,
         probability: 0
     }
 }

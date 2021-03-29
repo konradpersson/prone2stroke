@@ -3,13 +3,9 @@ POST http://127.0.0.1:5000/api/predict
 {
     "gender": 1,
     "age": 82,
-    "hypertension": 1,
-    "heart_disease": 1,
-    "ever_married": 1,
     "work_type": 1,
     "residence_type": 1,
     "avg_glucose_level": 1,
     "bmi": 23,
     "smoking_status": 1
-
 }

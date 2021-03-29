@@ -1,12 +1,19 @@
 <template>
     <form @submit.prevent="predict">
         <h3>Testing probability prediction</h3>
+        <label for="gender">Gender</label>
         <input v-model="gender" type="text" placeholder="gender"/>
+        <label for="age">Age</label>
         <input v-model="age" type="text" placeholder="age"/>
+        <label for="work_type">Work Type</label>
         <input v-model="work_type" type="text" placeholder="work-type"/>
+        <label for="residence_type">Residence Type</label>
         <input v-model="residence_type" type="text" placeholder="residence-type"/>
+        <label for="avg_glucose_level">AVG glucose level</label>
         <input v-model="avg_glucose_level" type="text" placeholder="avg-glucose-level"/>
-        <input v-model="bmi" type="text" placeholder="income"/>
+        <label for="bmi">Bmi</label>
+        <input v-model="bmi" type="text" placeholder="bmi"/>
+        <label for="smoking_status">Smoking status</label>
         <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
         <button>Submit</button>
     </form>
@@ -16,14 +23,13 @@
 export default {
     data() {
         return {
-            gender: '',
-            age: '',
-            work_type: '',
-            residence_type: '',
-            avg_glucose_level: '',
-            bmi: '',
-            smoking_status: ''
-
+            gender: 0,
+            age: 0,
+            work_type: 0,
+            residence_type: 0,
+            avg_glucose_level: 0,
+            bmi: 0,
+            smoking_status: 0
         }
     },
     methods: {
@@ -52,16 +58,6 @@ export default {
         }
     },
     created() {
-        console.log("Prediction Component Created")
-        this.predict({
-            gender: 1, 
-            age: 72, 
-            work_type: 1, 
-            residence_type: 1, 
-            avg_glucose_level: 1, 
-            bmi: 32, 
-            smoking_status: 1
-            })
     }
 }
 </script>
