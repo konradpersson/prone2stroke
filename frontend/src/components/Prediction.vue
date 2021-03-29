@@ -1,6 +1,6 @@
 <template>
+    <h3>Testing probability prediction</h3>
     <form @submit.prevent="predict">
-        <h3>Testing probability prediction</h3>
         <label for="gender">Gender</label>
         <input v-model="gender" type="text" placeholder="gender"/>
         <label for="age">Age</label>
@@ -62,6 +62,41 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+form{
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+input{
+    display: block;
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 20px;
+    outline: none;
+    padding: 10px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    border-right: 1px solid rgb(199, 199, 199);
+    border-left: none;
+    border-top: none;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    width: 50%;
+    font-size: 15px;
+    color: white;
+    margin: 20px 5px 5px 5px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
 
 </style>
