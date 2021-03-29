@@ -1,6 +1,11 @@
 POST http://127.0.0.1:5000/api/predict
 
 {
-    "age": 100,
-    "income": 1
+    "gender": 1,
+    "age": 82,
+    "work_type": 1,
+    "residence_type": 1,
+    "avg_glucose_level": 1,
+    "bmi": 23,
+    "smoking_status": 1
 }
