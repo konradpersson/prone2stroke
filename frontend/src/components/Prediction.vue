@@ -74,6 +74,7 @@ input{
     background-color: rgb(247, 247, 247);
     margin-bottom: 20px;
     outline: none;
+    width: 200px;
     padding: 10px;
     border-bottom: 1px solid rgb(199, 199, 199);
     border-right: 1px solid rgb(199, 199, 199);
@@ -83,13 +84,14 @@ input{
 
 label{
     display: inline-block;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     text-align: center;
 }
 
 button {
     background-color: black;
-    width: 50%;
+    display: inline;
+    width: 200px;
     font-size: 15px;
     color: white;
     margin: 20px 5px 5px 5px;
