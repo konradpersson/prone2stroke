@@ -10,7 +10,7 @@ app = Sanic('app')
 async def predict_click(req):
     values = req.json
 
-    prediction = predict(values['gender'], values['age'], values['hypertension'], values['heart_disease'], values['ever_married'], values['work_type'], values['residence_type'], values['avg_glucose_level'], values['bmi'], values['smoking_status'])
+    prediction = predict(values['gender'], values['age'], values['work_type'], values['residence_type'], values['avg_glucose_level'], values['bmi'], values['smoking_status'])
 
     return res.json(prediction)
 
