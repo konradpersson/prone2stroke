@@ -18,6 +18,11 @@ export default {
 <style scoped>
   p{
     font-size: 100px;
-    
+  
+  }
+  main{
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
   }
 </style>
