@@ -15,7 +15,6 @@
 <script>
 import Prediction from './components/Prediction.vue'
 import MainMenu from "./components/MainMenu.vue";
-
 export default {
   name: 'App',
   components: {
