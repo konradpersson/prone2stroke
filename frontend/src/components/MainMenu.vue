@@ -1,9 +1,8 @@
 <template>
   <div>
   <nav>
-      <router-link to="/">LOGO</router-link>
-      <router-link to="/">Charts</router-link>
-      <router-link to="/strokeinput">Stroke-Input</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/ProneAppDemo">Prone2Stroke Demo</router-link>
   </nav>
   </div>
 </template>
