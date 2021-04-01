@@ -12,7 +12,7 @@ import HomeProneKSPs from '../components/HomeProneKSPs.vue'
 import HomePronePreview from '../components/HomePronePreview.vue'
 
 export default {
-  components: { HomeHero, HonePronePreview, HomeProneKSPs },
+  components: { HomeHero, HomePronePreview, HomeProneKSPs }, 
 }
 </script>
 

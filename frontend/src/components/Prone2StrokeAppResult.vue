@@ -6,11 +6,7 @@
 </template>
 
 <script>
-import Prediction from './components/Prediction.vue'
 export default {
-  components: {
-    Prediction
-  },
   computed: {
     prediction() {
       return this.$store.state.prediction
