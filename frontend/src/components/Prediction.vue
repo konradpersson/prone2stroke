@@ -17,6 +17,9 @@
         <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
         <button>Submit</button>
     </form>
+    <div>
+        <p>{{ prediction.probability }}</p>
+     </div>
 </template>
 
 <script>
@@ -66,39 +69,48 @@ export default {
 
 form{
     box-sizing: border-box;
-    display: inline-block;
+    float: left;
+    width: 20%;
+    margin-left: 200px;
 }
 
 input{
-    display: block;
     background-color: rgb(247, 247, 247);
-    margin-bottom: 20px;
     outline: none;
-    width: 200px;
     padding: 10px;
     border-bottom: 1px solid rgb(199, 199, 199);
     border-right: 1px solid rgb(199, 199, 199);
     border-left: none;
     border-top: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:20px
 }
 
 label{
     display: inline-block;
     margin-bottom: 4px;
-    text-align: center;
+    width: 150px;
+    text-align: right;
 }
 
 button {
     background-color: black;
     display: inline;
-    width: 200px;
+    width: 190px;
     font-size: 15px;
     color: white;
-    margin: 20px 5px 5px 5px;
+    margin: 20px 5px 5px 180px;
     padding: 15px;
     border: none;
     cursor: pointer;
     outline: none;
+}
+h3{
+    text-align: left;
+    margin-left: 330px;
 }
 
 </style>
