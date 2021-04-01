@@ -17,9 +17,7 @@
         <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
         <button>Submit</button>
     </form>
-    <div>
-        <p>{{ prediction.probability }}</p>
-     </div>
+    
 </template>
 
 <script>
@@ -71,7 +69,7 @@ form{
     box-sizing: border-box;
     float: left;
     width: 20%;
-    margin-left: 200px;
+    margin-left: 200px;;
 }
 
 input{
