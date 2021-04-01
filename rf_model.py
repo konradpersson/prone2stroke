@@ -59,6 +59,6 @@ def predict(gender, age, work_type,residence_type,avg_glucose_level,bmi,smoking_
     probability = probability_of_stroke[0, 1]
     
     
-    return { "probability": probability * 100 }
+    return { "probability": int(probability * 100) }
       
       
