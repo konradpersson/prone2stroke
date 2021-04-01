@@ -1,4 +1,5 @@
 <template>
+<div>
     <h3>Testing probability prediction</h3>
     <form @submit.prevent="predict">
         <label for="gender">Gender</label>
@@ -17,6 +18,7 @@
         <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
         <button>Submit</button>
     </form>
+</div>
 </template>
 
 <script>
