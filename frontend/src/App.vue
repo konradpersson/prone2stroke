@@ -7,7 +7,7 @@
   <!-- <p>Will click: {{ prediction.WillClick }}</p> -->
   <!-- <p>probability: {{ prediction.probability }}</p> -->
     <div>
-        <p>{{ prediction.probability }}%</p>
+        <p>{{ prediction.probability }}% CHANCE TO GET A STROKE</p>
      </div>
 </main>
 </template>
@@ -32,6 +32,10 @@ export default {
 
 <style scoped>
   p{
+    display: inline-block;
     font-size: 100px;
+    width: 500px;
+    margin-top: -50px;
   }
+
 </style>
