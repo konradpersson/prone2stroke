@@ -1,14 +1,18 @@
 <template>
-  <main>
-      <h1>Charts</h1>
-      <img alt="Mixed Charts" src="../assets/mixed-charts.png" />
-      <img alt="Mixed Charts" src="../assets/bubble-charts.png" />
-  </main>
+  <div>
+    <HomeHero />
+    <HomePronePreview />
+    <HomeProneKSPs />
+  </div>
 </template>
 
 <script>
-export default {
+import HomeHero from '../components/HomeHero.vue'
+import HomeProneKSPs from '../components/HomeProneKSPs.vue'
+import HomePronePreview from '../components/HomePronePreview.vue'
 
+export default {
+  components: { HomeHero, HonePronePreview, HomeProneKSPs },
 }
 </script>
 
