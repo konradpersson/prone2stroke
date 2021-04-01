@@ -6,6 +6,9 @@
   <!-- <HelloWorld msg="Hello Vue 3.0 With Sanic and AI + Vite" /> -->
   <!-- <p>Will click: {{ prediction.WillClick }}</p> -->
   <!-- <p>probability: {{ prediction.probability }}</p> -->
+    <div>
+        <p>{{ prediction.probability }}%</p>
+     </div>
 </main>
 </template>
 
@@ -26,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  p{
+    font-size: 100px;
+  }
+</style>
