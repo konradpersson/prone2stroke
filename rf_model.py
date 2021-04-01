@@ -20,10 +20,10 @@ def train_model():
     df = pd.read_sql_query('SELECT * FROM dataset', con)
 
     # Encoding categorical values 
-    df['gender'] = df['gender'].replace({'Male':0,'Female':1,'Other':-1}).astype(np.uint8)
-    df['residence_type'] = df['residence_type'].replace({'Rural':0,'Urban':1}).astype(np.uint8)
-    df['work_type'] = df['work_type'].replace({'Private':0,'Self-employed':1,'Govt_job':2,'children':-1,'Never_worked':-2}).astype(np.uint8)
-    df['smoking_status'] = df['smoking_status'].replace({'smokes':2,'formerly smoked':1,'never smoked':0}).astype(np.uint8)
+    df['gender'] = df['gender'].replace({'Male':0,'Female':1,'Other':-1})
+    df['residence_type'] = df['residence_type'].replace({'Rural':0,'Urban':1})
+    df['work_type'] = df['work_type'].replace({'Private':0,'Self-employed':1,'Govt_job':2,'children':-1,'Never_worked':-2})
+    df['smoking_status'] = df['smoking_status'].replace({'smokes':2,'formerly smoked':1,'never smoked':0})
 
 
     #Feature Scaling (removing columns of lowest importance since it gives the best result)
@@ -58,8 +58,7 @@ def predict(gender, age, work_type,residence_type,avg_glucose_level,bmi,smoking_
       
     probability = probability_of_stroke[0, 1]
     
-    prediction = True if probability > 0.5 else False
     
-    return { "willGetStroke": prediction, "probability": probability }
+    return { "probability": probability }
       
       
