@@ -4,7 +4,7 @@
     <img class="icon" src="src/assets/images.jfif" alt="Icon">
     <p>StrokeStats</p>
     <div class="dropdown">
-      <button class="dropbtn">Demos<i class="fa fa-caret-down"></i>
+      <button class="dropbtn">Demos 
       </button>
       <div class="dropdown-content">
         <a href="#">Link 1</a>
@@ -28,15 +28,16 @@ export default {
 
 <style scoped>
 
+
+
 .navbar{
   font-size: 20px;
-  overflow: hidden;
-  height: 90px;
-  width: 100%;
+  padding: 30px, 10%;
   margin: 0px;
-  position: sticky;
-  justify-content: space-evenly;
-  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
 }
 
 .icon {
@@ -54,7 +55,6 @@ export default {
 }
 .search {
   height: 30px;
-  margin-top: 30px;
   border-radius: 7px;
   border-color: rgba(168, 166, 166, 0.521);
   border-style: solid;
@@ -77,7 +77,8 @@ export default {
   height: 30px;
   color: white;
   border: none;
-  padding: 15px;
+  padding: 10px 25px 25px 25px;
+  min-width: 100px;
 } 
 
 .signup:hover {
@@ -85,7 +86,7 @@ export default {
 }
 
 .dropdown { 
-  overflow: hidden; 
+  overflow: hidden;  
 }
 
 .dropdown .dropbtn {
@@ -102,11 +103,16 @@ export default {
   color: rgb(139, 164, 233);
 }
 
+.navbar .dropdown:hover .dropbtn {
+  color: rgb(139, 164, 233);
+  background-color:  rgba(183, 191, 196, 0.377);
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(128, 128, 128, 0.5);
-  min-width: 122px;
+  background-color: rgba(183, 191, 196, 0.795);
+  min-width: 95px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -121,11 +127,18 @@ export default {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: rgba(152, 173, 190, 0.404);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  }
 
 </style> 
