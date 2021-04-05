@@ -34,7 +34,7 @@ export default {
   font-size: 20px;
   padding: 30px, 10%;
   margin: 0px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   display: flex;
   position: relative;
@@ -70,6 +70,8 @@ export default {
   text-decoration: none;
   padding: 34px 16px;
 }
+
+
 
 .signup {
   background: rgb(129, 152, 228);
@@ -139,6 +141,7 @@ export default {
         flex-direction: column;
         align-items: flex-start;
     }
-  }
+
+}
 
 </style> 
