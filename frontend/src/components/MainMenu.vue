@@ -50,7 +50,7 @@ export default {
 .icon {
   padding: 15px;
   background-size: cover;
-  width: 60%;
+  width: 100%;
   margin-left: 0px;
   margin-top: 40px;
 }
