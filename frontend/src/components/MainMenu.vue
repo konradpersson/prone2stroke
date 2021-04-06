@@ -2,7 +2,7 @@
 
  <div class="navbar">
     <img class="icon" src="src/assets/images.jfif" alt="Icon">
-    <p>StrokeStats</p>
+    <p class="strokestats">StrokeStats</p>
     <div class="dropdown">
       <button class="dropbtn">Demos 
       </button>
@@ -32,7 +32,7 @@ export default {
 
 .navbar{
   font-size: 20px;
-  padding: 30px, 10%;
+  padding: 10%, 10%;
   margin: 0px;
   justify-content: space-around;
   align-items: center;
@@ -58,8 +58,7 @@ export default {
   border-radius: 7px;
   border-color: rgba(168, 166, 166, 0.521);
   border-style: solid;
-  border-width: 1px;
-  
+  border-width: 1px; 
 }
   
 
@@ -136,12 +135,51 @@ export default {
   display: block;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        font-size: 15px;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
     }
 
+    .strokestats {
+      display: none;
+  }
+
+  .search {
+  height: 20px;
+  border-radius: 7px;
+  border-color: rgba(168, 166, 166, 0.521);
+  border-style: solid;
+  border-width: 1px;
+  width: 25vw;
+  font-size: 12px; 
 }
+
+
+.signup {
+  
+  background: rgb(129, 152, 228);
+  border-radius: 7px;
+  height: 10px;
+  color: white;
+  border: none;
+  padding: 5px 15px 18px 15px;
+  width: 15vw;
+} 
+.dropdown .dropbtn { 
+  font-size: 15px;  
+}
+
+.dropdown-content {
+  min-width: 80px;
+}
+  
+}
+
+
 
 </style> 
