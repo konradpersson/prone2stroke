@@ -1,8 +1,10 @@
 <template>
 
  <div class="navbar">
+   <div class="logo">
     <img class="icon" src="src/assets/images.jfif" alt="Icon">
     <p class="strokestats">StrokeStats</p>
+   </div>
     <div class="dropdown">
       <button class="dropbtn">Demos 
       </button>
@@ -40,17 +42,17 @@ export default {
   position: relative;
 }
 
+.logo{
+  display: flex;
+  justify-content: flex-start;
+}
 .icon {
-  float: left;
-  padding: 30px 16px;
+  padding: 15px;
   width: 35px;
   height: 35px;
 }
 .navbar .p {
-  float: left;
   color: rgb(41, 39, 40);
-  padding: 30px, 16px;
-  text-align: center;
   text-decoration: none;
 }
 .search {
