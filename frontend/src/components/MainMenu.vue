@@ -6,19 +6,18 @@
     </router-link>
     <!--<p class="strokestats">StrokeStats</p> -->
    </div>
-    <div class="dropdown">
+    <!-- <div class="dropdown">
       <button class="dropbtn">Demos 
-      </button>
-      <div class="dropdown-content">
+      </button> -->
+      <!-- <div class="dropdown-content">
         <a href="/ProneAppDemo">StrokeApp</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
-    </div>
+    </div> -->
   </div>
-  <router-link to="/">Blog</router-link>
-  <router-link to="/">About</router-link>
-  <input class="search" type="text" placeholder="Search...">
-  <router-link to="/"><button  class="signup"> Sign Up </button></router-link>
+  <router-link to="/ProneAppDemo" >StrokeApp</router-link>
+  <!-- <input class="search" type="text" placeholder="Search...">
+  <router-link to="/"><button  class="signup"> Sign Up </button></router-link> -->
   </nav>
 
 </template>
@@ -44,16 +43,17 @@ export default {
 .logo{
   display: flex;
   justify-content: flex-start;
+  
 
 }
 
 .icon {
   padding: 15px;
   background-size: cover;
-  width: 100%;
-  margin-left: 0px;
-  margin-top: 40px;
+  width: 20%;
+  margin-top: 15px;
 }
+
 .navbar .p {
   color: rgb(41, 39, 40);
   text-decoration: none;
@@ -83,6 +83,7 @@ export default {
   border: none;
   padding: 7px;
   min-width: 100px;
+  margin-right: 60px;
 } 
 
 .signup:hover {
@@ -121,6 +122,7 @@ export default {
   min-width: 95px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+
 }
 
 .dropdown-content a {
@@ -130,6 +132,7 @@ export default {
   text-decoration: none;
   display: block;
   text-align: left;
+
 }
 
 .dropdown-content a:hover {
@@ -174,6 +177,7 @@ export default {
 } 
 .dropdown .dropbtn { 
   font-size: 15px;  
+  
 }
 
 .dropdown-content {
