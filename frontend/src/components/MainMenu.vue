@@ -1,67 +1,58 @@
 <template>
-<main>
+
  <nav class="navbar">
-  <div>
+    <div class="logo">
     <a href="/"><img class="icon" src="src/assets/p2s-logo.png" alt="Icon"></a>
-    <a class="menu" href="/ProneAppDemo">StrokeApp</a>
-  </div>
+   </div>
+        <a href="/ProneAppDemo">StrokeApp</a>
   </nav>
-</main>
+
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
 <style scoped>
-
-a{
-  margin-left: 1%;
-}
-
-.menu{
-  margin-left: 59%;
-}
-div{
+.navbar{
+  font-size: 20px;
+  margin: 0px;
+  justify-content: space-around;
+  align-items: center;
   display: flex;
-  justify-content: flex-start;
-  align-items: left;
-  width: 100%;
-
-
 }
-
+.logo{
+  float: left;
+}
 .icon {
+  padding: 15px;
   background-size: cover;
   width: 30%;
-  margin-top: -35px;
+  margin-top: 20px;
 }
 
+  
 .navbar a{
   color: gray;
   text-decoration: none;
   padding: 0px 5px;
-  margin-top: 50px;
-  font-size: 20px;
 }
 
-.navbar a:hover {
+.navbar a:hover{
   color: rgb(139, 164, 233);
 }
 
+
 @media (max-width: 1000px) {
-.navbar {
-  font-size: 15px;
-  flex-direction: row;
-  align-items: right;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
-}
-  
+  .navbar {
+      font-size: 15px;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+  }
 }
 
-
-</style> 
+</style>
