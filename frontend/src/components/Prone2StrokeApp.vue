@@ -2,8 +2,25 @@
 <div>
     <h3>Testing probability prediction</h3>
     <form @submit.prevent="predict">
-        <label for="gender">Gender</label>
-        <input v-model="gender" type="text" placeholder="gender"/>
+
+        <p>Gender:</p>
+
+        <div>
+        <input v-model="gender" type="radio" id="male" name="drone" value="1"
+                checked>
+        <label for="huey">Male</label>
+        </div>
+
+        <div>
+        <input v-model="gender" type="radio" id="female" name="drone" value="2">
+        <label for="dewey">Female</label>
+        </div>
+
+        <div>
+        <input v-model="gender" type="radio" id="other" name="drone" value="-1">
+        <label for="louie">Other</label>
+        </div>
+
         <label for="age">Age</label>
         <input v-model="age" type="text" placeholder="age"/>
         <label for="work_type">Work Type</label>
