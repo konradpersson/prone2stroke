@@ -1,24 +1,24 @@
-# Prone2Stroke
+# Prone to Stroke web-application
 
-A collection of AI-tools to aid medical professionals in their work.
-
+This is an app that gives you the opportunity to input medical values and returns a probability of getting a stroke.
+The app uses a stroke dataset which is then handled by the RandomForest model to give you a probability in percentage. 
 
 ## Project setup (Windows)
 
-Create a virtual environment for your python requirements.
+1. Download the project
 
-`python -m venv venv`
+2. Create a virtual environment for your python requirements.
+    `python -m venv venv`
 
-Activate the virtual environment:
+3. Activate the virtual environment:
+    `venv/Scripts/activate.bat`
 
-`venv/Scripts/activate.bat`
+4. Install python requirements:
+    `python -m pip install -r requirements.txt`
 
-Install python requirements:
-`python -m pip install -r requirements.txt`
-
-Go to the frontend folder and install npm modules:
-`cd frontend`
-`npm install`
+5. Go to the frontend folder and install npm modules:
+    `cd frontend`
+    `npm install`
 
 ### Run the backend
 `py main.py`
