@@ -2,20 +2,103 @@
 <div>
     <h3>Testing probability prediction</h3>
     <form @submit.prevent="predict">
-        <label for="gender">Gender</label>
-        <input v-model="gender" type="text" placeholder="gender"/>
-        <label for="age">Age</label>
+
+        <p>Gender</p>
+
+        <div class="form--section">
+        <div>
+        <input v-model="gender" type="radio" id="male" name="gender" value="1">
+        <label for="huey">Male</label>
+        </div>
+
+        <div>
+        <input v-model="gender" type="radio" id="female" name="gender" value="2">
+        <label for="dewey">Female</label>
+        </div>
+        </div>
+
+        <label for="age" class="section-heading">Age</label>
+
+        <div class="form--section">
         <input v-model="age" type="text" placeholder="age"/>
-        <label for="work_type">Work Type</label>
-        <input v-model="work_type" type="text" placeholder="work-type"/>
-        <label for="residence_type">Residence Type</label>
-        <input v-model="residence_type" type="text" placeholder="residence-type"/>
-        <label for="avg_glucose_level">AVG glucose level</label>
-        <input v-model="avg_glucose_level" type="text" placeholder="avg-glucose-level"/>
-        <label for="bmi">Bmi</label>
-        <input v-model="bmi" type="text" placeholder="bmi"/>
-        <label for="smoking_status">Smoking status</label>
-        <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
+        </div>
+
+
+        <p>Work type</p>
+
+        <div class="form--section">
+            <div>
+                <input v-model="work_type" type="radio" id="private" name="work_type" value="0">
+                <label for="private">Private</label>
+            </div>
+
+            <div>
+                <input v-model="work_type" type="radio" id="self-employed" name="work_type" value="1">
+                <label for="self-employed">Self employed</label>
+            </div>
+
+            <div>
+                <input v-model="work_type" type="radio" id="gov-job" name="work_type" value="2">
+                <label for="gov-job">Government Job</label>
+            </div>
+
+            <div>
+                <input v-model="work_type" type="radio" id="children" name="work_type" value="-1">
+                <label for="children">Children</label>
+            </div>
+
+            <div>
+                <input v-model="work_type" type="radio" id="never-worked" name="work_type" value="-2">
+                <label for="never-worked">Never worked</label>
+            </div>
+        </div>
+        
+        <p>Residence type</p>
+
+        <div class="form--section">
+            <div>
+                <input v-model="residence_type" type="radio" id="rural" name="residence_type" value="0">
+                <label for="rural">Rural</label>
+            </div>
+
+            <div>
+                <input v-model="residence_type" type="radio" id="urban" name="residence_type" value="1">
+                <label for="urban">Urban</label>
+            </div>
+        </div>
+
+
+        <label for="avg_glucose_level" class="section-heading">AVG glucose level</label>
+            <div class="form--section">
+                <input v-model="avg_glucose_level" type="text" placeholder="avg-glucose-level"/>
+            </div>
+
+        <label for="bmi" class="section-heading">BMI</label>
+        <div class="form--section">
+            <input v-model="bmi" type="text" placeholder="bmi"/>
+        </div>
+
+
+        <p>Smoking status</p>
+        
+        <div class="form--section">
+        <div>
+            <input v-model="smoking_status" type="radio" id="smokes" name="smoking_status" value="2">
+            <label for="smokes">Smokes</label>
+        </div>
+
+        <div>
+            <input v-model="smoking_status" type="radio" id="formerly-smoked" name="smoking_status" value="1">
+            <label for="formerly-smoked">Formerly Smoked</label>
+        </div>
+
+        <div>
+            <input v-model="smoking_status" type="radio" id="never-smoked" name="smoking_status" value="0">
+            <label for="never-smoked">Never Smoked</label>
+        </div>
+        </div>
+
+
         <button>Submit</button>
     </form>
 </div>
@@ -25,12 +108,12 @@
 export default {
     data() {
         return {
-            gender: 0,
-            age: 0,
+            gender: 1,
+            age: 55,
             work_type: 0,
-            residence_type: 0,
-            avg_glucose_level: 0,
-            bmi: 0,
+            residence_type: 1,
+            avg_glucose_level: 140,
+            bmi: 22,
             smoking_status: 0
         }
     },
@@ -66,28 +149,38 @@ export default {
 
 <style scoped>
 
-form{
+form {
     box-sizing: border-box;
     display: inline-block;
 }
 
-input{
+form p, label.section-heading {
+    display: block;
+    font-weight: bold;
+    margin-top: 3em;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+}
+
+.form--section {
+    border-radius: 7px;
+    background-color: white;
+    box-shadow:
+        0  5px 10px rgba(154,160,185,0.05),
+        0 15px 40px rgba(166,173,201,0.2);
+    padding: 20px;
+}
+
+input[type=text] {
     display: block;
     background-color: rgb(247, 247, 247);
     margin-bottom: 20px;
     outline: none;
-    width: 200px;
     padding: 10px;
     border-bottom: 1px solid rgb(199, 199, 199);
     border-right: 1px solid rgb(199, 199, 199);
     border-left: none;
     border-top: none;
-}
-
-label{
-    display: inline-block;
-    margin-bottom: 4px;
-    text-align: center;
 }
 
 button {
