@@ -33,7 +33,7 @@ div{
 
 .pic{
   float:left;
-  margin-top: 40px;
+  margin-top: -40px;
 
 }
 
@@ -44,6 +44,7 @@ div{
   margin-left: 60px;
   width: 50%;
   text-align: left;
+  margin-top: -80px;
 }
 
 button{

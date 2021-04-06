@@ -2,8 +2,8 @@
 
  <nav class="navbar">
     <div class="logo">
-    <router-link to="/"><img class="icon" src="src/assets/images.jfif" alt="Icon">
-    </router-link><p class="strokestats">StrokeStats</p>
+    <router-link to="/"><img class="icon" src="src/assets/p2s-logo.png" alt="Icon">
+    <!-- </router-link><p class="strokestats">StrokeStats</p> -->
    </div>
     <div class="dropdown">
       <button class="dropbtn">Demos 
@@ -48,8 +48,10 @@ export default {
 
 .icon {
   padding: 15px;
-  width: 35px;
-  height: 35px;
+  background-size: cover;
+  width: 60%;
+  margin-left: 0px;
+  margin-top: 40px;
 }
 .navbar .p {
   color: rgb(41, 39, 40);
