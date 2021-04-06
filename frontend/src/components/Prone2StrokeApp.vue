@@ -6,33 +6,71 @@
         <p>Gender:</p>
 
         <div>
-        <input v-model="gender" type="radio" id="male" name="drone" value="1"
+        <input v-model="gender" type="radio" id="male" name="gender" value="1"
                 checked>
         <label for="huey">Male</label>
         </div>
 
         <div>
-        <input v-model="gender" type="radio" id="female" name="drone" value="2">
+        <input v-model="gender" type="radio" id="female" name="gender" value="2">
         <label for="dewey">Female</label>
         </div>
 
         <div>
-        <input v-model="gender" type="radio" id="other" name="drone" value="-1">
+        <input v-model="gender" type="radio" id="other" name="gender" value="-1">
         <label for="louie">Other</label>
         </div>
 
+
         <label for="age">Age</label>
         <input v-model="age" type="text" placeholder="age"/>
-        <label for="work_type">Work Type</label>
-        <input v-model="work_type" type="text" placeholder="work-type"/>
+
+
+        <p>Work type:</p>
+
+        <div>
+        <input v-model="work_type" type="radio" id="private" name="work_type" value="0"
+                checked>
+        <label for="private">Private</label>
+        </div>
+
+        <div>
+        <input v-model="work_type" type="radio" id="self-employed" name="work_type" value="1">
+        <label for="self-employed">Self employed</label>
+        </div>
+
+        <div>
+        <input v-model="work_type" type="radio" id="gov-job" name="work_type" value="2">
+        <label for="gov-job">Government Job</label>
+        </div>
+
+        <div>
+        <input v-model="work_type" type="radio" id="children" name="work_type" value="-1">
+        <label for="children">Children</label>
+        </div>
+
+        <div>
+        <input v-model="work_type" type="radio" id="never-worked" name="work_type" value="-2">
+        <label for="never-worked">Never worked</label>
+        </div>
+        
+        
         <label for="residence_type">Residence Type</label>
         <input v-model="residence_type" type="text" placeholder="residence-type"/>
+
+
         <label for="avg_glucose_level">AVG glucose level</label>
         <input v-model="avg_glucose_level" type="text" placeholder="avg-glucose-level"/>
+
+
         <label for="bmi">Bmi</label>
         <input v-model="bmi" type="text" placeholder="bmi"/>
+
+
         <label for="smoking_status">Smoking status</label>
         <input v-model="smoking_status" type="text" placeholder="smoking-status"/>
+
+        
         <button>Submit</button>
     </form>
 </div>
@@ -42,7 +80,7 @@
 export default {
     data() {
         return {
-            gender: 0,
+            gender: 1,
             age: 0,
             work_type: 0,
             residence_type: 0,
