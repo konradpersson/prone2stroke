@@ -1,6 +1,6 @@
 <template>
 
- <div class="navbar">
+ <nav class="navbar">
    <div class="logo">
     <img class="icon" src="src/assets/images.jfif" alt="Icon">
     <p class="strokestats">StrokeStats</p>
@@ -14,11 +14,11 @@
         <a href="#">Link 3</a>
     </div>
   </div>
-  <a href="#"> Blog </a>
+  <router-link to="/">Blog</router-link>
   <router-link to="/">Home</router-link>
   <input class="search" type="text" placeholder="Search...">
   <router-link to="/"><button  class="signup"> Sign Up </button></router-link>
-  </div>
+  </nav>
 
 </template>
 
@@ -44,6 +44,7 @@ export default {
   display: flex;
   justify-content: flex-start;
 }
+
 .icon {
   padding: 15px;
   width: 35px;
@@ -54,11 +55,11 @@ export default {
   text-decoration: none;
 }
 .search {
-  height: 30px;
   border-radius: 7px;
   border-color: rgba(168, 166, 166, 0.521);
   border-style: solid;
   border-width: 1px; 
+  padding: 5px;
 }
   
 
@@ -66,7 +67,7 @@ export default {
 .navbar a{
   color: gray;
   text-decoration: none;
-  padding: 1px;
+  padding: 0px 10px;
 }
 
 
@@ -74,10 +75,9 @@ export default {
 .signup {
   background: rgb(129, 152, 228);
   border-radius: 7px;
-  height: 30px;
   color: white;
   border: none;
-  padding: 10px 25px 25px 25px;
+  padding: 7px;
   min-width: 100px;
 } 
 
@@ -113,7 +113,7 @@ export default {
   font-size: 13px;
   display: none;
   position: absolute;
-  background-color: rgba(183, 191, 196, 0.623);
+  background-color: rgba(183, 191, 196, 0.938);
   min-width: 95px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -121,7 +121,7 @@ export default {
 
 .dropdown-content a {
   float: none;
-  color: gray;
+  color:  rgb(91, 95, 97);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -129,7 +129,7 @@ export default {
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(152, 173, 190, 0.404);
+  background-color: rgba(200, 213, 224, 0.664);
 }
 
 .dropdown:hover .dropdown-content {
@@ -151,12 +151,12 @@ export default {
   }
 
   .search {
-  height: 20px;
   border-radius: 7px;
   border-color: rgba(168, 166, 166, 0.521);
   border-style: solid;
   border-width: 1px;
   font-size: 12px; 
+  padding: 5px;
 }
 
 
@@ -164,11 +164,9 @@ export default {
   
   background: rgb(129, 152, 228);
   border-radius: 7px;
-  height: 10px;
   color: white;
   border: none;
-  padding: 5px 15px 18px 15px;
-  width: 15vw;
+  padding: 5px;
 } 
 .dropdown .dropbtn { 
   font-size: 15px;  
@@ -182,13 +180,12 @@ export default {
 
 @media (max-width: 600px) {
   .search {
-  height: 20px;
   border-radius: 7px;
   border-color: rgba(168, 166, 166, 0.521);
   border-style: solid;
   border-width: 1px;
-  width: 25vw;
   font-size: 12px; 
+  padding: 5px;
 }
 
 }
