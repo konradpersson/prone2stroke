@@ -34,7 +34,7 @@ export default {
 
 .navbar{
   font-size: 20px;
-  padding: 10%, 10%;
+  padding: 5%, 5%;
   margin: 0px;
   justify-content: space-around;
   align-items: center;
@@ -108,13 +108,13 @@ export default {
 
 .navbar .dropdown:hover .dropbtn {
   color: rgb(139, 164, 233);
-  background-color:  rgba(183, 191, 196, 0.377);
+  background-color:  rgba(183, 191, 196, 0.096);
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(183, 191, 196, 0.795);
+  background-color: rgba(183, 191, 196, 0.623);
   min-width: 95px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
