@@ -9,13 +9,13 @@
       <button class="dropbtn">Demos 
       </button>
       <div class="dropdown-content">
-        <a href="#">Link 1</a>
+        <a href="/ProneAppDemo">StrokeApp</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
     </div>
   </div>
   <a href="#"> Blog </a>
-  <router-link to="/">About</router-link>
+  <router-link to="/">Home</router-link>
   <input class="search" type="text" placeholder="Search...">
   <router-link to="/"><button  class="signup"> Sign Up </button></router-link>
   </div>
@@ -34,12 +34,10 @@ export default {
 
 .navbar{
   font-size: 20px;
-  padding: 5%, 5%;
   margin: 0px;
   justify-content: space-around;
   align-items: center;
   display: flex;
-  position: relative;
 }
 
 .logo{
@@ -66,10 +64,9 @@ export default {
 
 
 .navbar a{
-  float: left;
   color: gray;
   text-decoration: none;
-  padding: 34px 16px;
+  padding: 1px;
 }
 
 
@@ -101,6 +98,7 @@ export default {
   background-color: inherit;
   margin: 0;
   font-family: inherit;
+  min-width: 90px;
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
   color: rgb(139, 164, 233);
@@ -112,6 +110,7 @@ export default {
 }
 
 .dropdown-content {
+  font-size: 13px;
   display: none;
   position: absolute;
   background-color: rgba(183, 191, 196, 0.623);
