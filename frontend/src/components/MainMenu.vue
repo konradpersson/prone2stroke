@@ -155,7 +155,6 @@ export default {
   border-color: rgba(168, 166, 166, 0.521);
   border-style: solid;
   border-width: 1px;
-  width: 25vw;
   font-size: 12px; 
 }
 
@@ -180,6 +179,17 @@ export default {
   
 }
 
+@media (max-width: 600px) {
+  .search {
+  height: 20px;
+  border-radius: 7px;
+  border-color: rgba(168, 166, 166, 0.521);
+  border-style: solid;
+  border-width: 1px;
+  width: 25vw;
+  font-size: 12px; 
+}
 
+}
 
 </style> 
