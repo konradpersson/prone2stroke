@@ -1,9 +1,9 @@
 <template>
 
  <nav class="navbar">
-   <div class="logo">
-    <img class="icon" src="src/assets/images.jfif" alt="Icon">
-    <p class="strokestats">StrokeStats</p>
+    <div class="logo">
+    <router-link to="/"><img class="icon" src="src/assets/images.jfif" alt="Icon">
+    </router-link><p class="strokestats">StrokeStats</p>
    </div>
     <div class="dropdown">
       <button class="dropbtn">Demos 
@@ -15,7 +15,7 @@
     </div>
   </div>
   <router-link to="/">Blog</router-link>
-  <router-link to="/">Home</router-link>
+  <router-link to="/">About</router-link>
   <input class="search" type="text" placeholder="Search...">
   <router-link to="/"><button  class="signup"> Sign Up </button></router-link>
   </nav>
@@ -43,6 +43,7 @@ export default {
 .logo{
   display: flex;
   justify-content: flex-start;
+
 }
 
 .icon {
@@ -67,7 +68,7 @@ export default {
 .navbar a{
   color: gray;
   text-decoration: none;
-  padding: 0px 10px;
+  padding: 0px 5px;
 }
 
 
