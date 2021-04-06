@@ -1,6 +1,6 @@
 <template>
   <div>
-      <code>2 columns of ksps goes here</code>
+      <code></code>
   </div>
 </template>
 

@@ -43,10 +43,6 @@ def train_model():
     model.fit(X_train_resh,y_train_resh)
 
     model_tuned_pred = model.predict(X_test)
-    
-    # LIME has one explainer for all the models
-    explainer = lime.lime_tabular.LimeTabularExplainer(X.values, feature_names=X.columns.values.tolist(),
-                                                      class_names=['Not going to get stroke','Possibility of stroke'], verbose=True, mode='classification') 
  
     con.close()
 
