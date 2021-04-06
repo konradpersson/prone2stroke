@@ -3,7 +3,8 @@
  <nav class="navbar">
     <div class="logo">
     <router-link to="/"><img class="icon" src="src/assets/p2s-logo.png" alt="Icon">
-    <!-- </router-link><p class="strokestats">StrokeStats</p> -->
+    </router-link>
+    <!--<p class="strokestats">StrokeStats</p> -->
    </div>
     <div class="dropdown">
       <button class="dropbtn">Demos 
