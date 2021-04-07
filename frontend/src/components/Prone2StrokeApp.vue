@@ -1,6 +1,5 @@
 <template>
 <div>
-    <h3>Testing probability prediction</h3>
     <form @submit.prevent="predict">
 
         <p>Gender</p>
@@ -159,11 +158,11 @@ form p, label.section-heading {
     font-weight: bold;
     margin-top: 3em;
     margin-bottom: 0.5em;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .form--section {
-    border-radius: 7px;
+    border-radius: 25px;
     background-color: white;
     box-shadow:
         0  5px 10px rgba(154,160,185,0.05),
@@ -173,26 +172,27 @@ form p, label.section-heading {
 
 input[type=text] {
     display: block;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     outline: none;
     padding: 10px;
     border-bottom: 1px solid rgb(199, 199, 199);
-    border-right: 1px solid rgb(199, 199, 199);
+    border-right: 0px solid rgb(199, 199, 199);
     border-left: none;
     border-top: none;
 }
 
 button {
-    background-color: black;
+    background-color: rgb(129, 152, 228);
     display: inline;
-    width: 200px;
-    font-size: 15px;
+    width: 100%;
+    font-size: 1.2em;
     color: white;
-    margin: 20px 5px 5px 5px;
-    padding: 15px;
+    margin: 50px 5px 50px 0px;
+    padding: 1em;
     border: none;
     cursor: pointer;
+    border-radius: 25px;
     outline: none;
 }
 
