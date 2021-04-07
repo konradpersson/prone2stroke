@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 
 #app {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -10,10 +12,10 @@
 }
 
 body{
-  margin-top: 150px;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 150px;
+  margin-top: 8em;
+  margin-left: 8em;
+  margin-right: 8em;
+  margin-bottom: 8em;
   background-color: rgb(129, 152, 228);
 
 }

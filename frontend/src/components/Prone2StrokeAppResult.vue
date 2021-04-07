@@ -1,6 +1,6 @@
 <template>
   <div>
-      <code>Result goes here</code>
+      <code></code>
        <p>{{ prediction.probability }}%</p>
   </div>
 </template>
@@ -15,6 +15,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+p{
+  font-size: 15em;
+}
+
 
 </style>

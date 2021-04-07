@@ -1,10 +1,18 @@
 <template>
-    <div>
+    <div class="intro">
         <ProneAppIntro />
-        <ProneAppKSP />
+        <!-- <ProneAppKSP /> -->
+    </div>
+  <div>
+      <div class="app">
         <Prone2StrokeApp />
+      </div>
+
+    <div class="result">
         <Prone2StrokeAppResult />
     </div>
+
+  </div>
 </template>
 
 <script>
@@ -18,6 +26,25 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.intro{
+  margin-left: 6em;
+  margin-right: 6em;
+}
+
+
+.app{
+  margin-left: 6em;
+  margin-right: 6em;
+  display: inline-block;
+
+}
+
+.result{
+  position: absolute;
+  display: inline-block;
+  margin-left: 20em;
+}
+
 
 </style>
