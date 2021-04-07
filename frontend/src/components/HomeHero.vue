@@ -1,8 +1,8 @@
 <template>
 <main>
-  <div>
+  <div class="hero">
   <div class="pic">
-    <img src="https://media.istockphoto.com/vectors/three-doctors-are-standing-on-a-blue-background-vector-id1133023384?k=6&m=1133023384&s=612x612&w=0&h=3ssOjJvlSrkfoRA-HiDLk9eO-EqZfULrpGJm1pvcZqA=">
+    <img class="pic" src="https://media.istockphoto.com/vectors/three-doctors-are-standing-on-a-blue-background-vector-id1133023384?k=6&m=1133023384&s=612x612&w=0&h=3ssOjJvlSrkfoRA-HiDLk9eO-EqZfULrpGJm1pvcZqA=">
   </div>
   <div class="text">
       <h1>Connecting medical and AI-students</h1>
@@ -20,11 +20,14 @@ export default {
 </script>
 
 <style scoped>
+
+.hero{
+  margin-top: 15vh;
+  justify-content: space-between;
+  display: flex;
+}
 main{
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-left: 120px;
-  margin-right: 120px;
+  height: auto;
 }
 
 div{
@@ -32,19 +35,19 @@ div{
 }
 
 .pic{
-  float:left;
-  margin-top: -40px;
-
+  align-items: flex-start;
 }
 
 .text{
   display: inline-block;
   line-height: 1.8;
   color: rgb(168, 168, 168);
-  margin-left: 60px;
-  width: 50%;
   text-align: left;
   margin-top: -80px;
+  width: 50vw;
+  height: 40vh;
+  align-items: flex-end;
+
 }
 
 button{
@@ -57,15 +60,172 @@ button{
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  width: 300px;
+  width: 250px;
 }
 
 h1{
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   color: rgb(58, 58, 58);
   margin-bottom: 30px;
 }
 
+@media (max-width: 1100px) {
 
+  .hero{
+    display: inline-flex;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+  }
+
+  .pic{
+    width: 400px;
+    height: auto;
+  }
+
+  .text{
+    
+    width: 30vw;
+    height: 40vh;
+  }
+
+  button{
+    padding: 10px;
+    width: 150px;
+  }
+
+  h1{
+    margin-top: 70px;
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .hero{
+    margin-top: 5vh;
+    display: inline-block;
+    margin-bottom: 5vh;
+  }
+
+  .pic{
+    width: 300px;
+    height: auto;
+  }
+
+  .text{
+    width: 60vw;
+    height: 40vh;
+    margin-left: 3vh; 
+  }
+
+  h1{
+    margin-top: 90px;
+    font-size: 50px;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .hero{
+    margin-top: 5vh;
+    display: inline-block;
+    margin-bottom: 5vh;
+  }
+
+  .pic{
+    width: 200px;
+    height: auto;
+  }
+
+  .text{
+    width: 40vw;
+    height: 40vh;
+    margin-left: 3vh; 
+  }
+
+  h1{
+    margin-top: 90px;
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .hero{
+    margin-top: 5vh;
+    display: inline-block;
+    margin-bottom: 5vh;
+  }
+
+  .pic{
+    width: 80px;
+    height: auto;
+  }
+
+  .text{
+    width: 30vw;
+    height: 40vh;
+    font-size: 12px;
+    margin-left: 0;
+    
+  }
+
+  button{
+    padding: 5px;
+    width: 80px;
+    font-size: 10px;
+  }
+
+  h1{
+    margin-top: 70px;
+    font-size: 17px;
+  }
+  
+  @media (max-width: 400px) {
+
+  .hero{
+    margin-top: 5vh;
+    display: inline-block;
+    margin-bottom: 5vh;
+  }
+
+  .pic{
+    width: 60px;
+    height: auto;
+    padding: 5px;
+
+  }
+
+  .text{
+    width: 23vw;
+    height: 40vh;
+    font-size: 10px;
+    
+  }
+
+  button{
+    padding: 5px;
+    width: 80px;
+    font-size: 10px;
+  }
+
+  h1{
+    margin-top: 70px;
+    font-size: 12px;
+  }
+  }
+
+    @media (max-width: 380px) {
+
+  .hero{
+    display: none;
+  }
+
+  
+  }
+}
 </style>
