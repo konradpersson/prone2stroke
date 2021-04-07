@@ -165,21 +165,17 @@ form p, label.section-heading {
     border-radius: 25px;
     background-color: white;
     box-shadow:
-        0  5px 10px rgba(154,160,185,0.05),
-        0 15px 40px rgba(166,173,201,0.2);
+        0  5px 5px rgba(0, 0, 0, 0.05),
+        10px 10px 25px rgba(212, 212, 212, 0.6);
     padding: 20px;
 }
 
 input[type=text] {
     display: block;
     background-color: rgb(255, 255, 255);
-    margin-bottom: 20px;
+    font-size: 18px;
     outline: none;
-    padding: 10px;
-    border-bottom: 1px solid rgb(199, 199, 199);
-    border-right: 0px solid rgb(199, 199, 199);
-    border-left: none;
-    border-top: none;
+    border: none;
 }
 
 button {
@@ -194,6 +190,9 @@ button {
     cursor: pointer;
     border-radius: 25px;
     outline: none;
+    box-shadow:
+    0  5px 5px rgba(0, 0, 0, 0.05),
+    10px 10px 25px rgba(212, 212, 212, 0.6);
 }
 
 </style>
