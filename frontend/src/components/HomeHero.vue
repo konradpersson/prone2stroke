@@ -162,8 +162,9 @@ h1{
   }
 
   .pic{
-    width: 80px;
+    width: 110px;
     height: auto;
+    padding: 2px;
   }
 
   .text{
