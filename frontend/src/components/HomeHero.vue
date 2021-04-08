@@ -101,6 +101,15 @@ h1{
 
 }
 @media (max-width: 1300px) {
+  
+  .hero{
+    display: inline-flex;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+  }
+  .main{
+    height: auto;
+  }
   .pic{
     width: 400px;
     height: auto;
@@ -108,7 +117,7 @@ h1{
 
   .text{
     
-    width: 30vw;
+    width: 38vw;
     height: 40vh;
   }
 
