@@ -100,8 +100,30 @@ h1{
   }
 
 }
+@media (max-width: 1300px) {
+  .pic{
+    width: 400px;
+    height: auto;
+  }
 
-@media (max-width: 1000px) {
+  .text{
+    
+    width: 30vw;
+    height: 40vh;
+  }
+
+  button{
+    padding: 10px;
+    width: 150px;
+  }
+
+  h1{
+    margin-top: 70px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
 
   .hero{
     margin-top: 5vh;
