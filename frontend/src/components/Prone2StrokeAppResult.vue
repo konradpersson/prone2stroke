@@ -1,7 +1,7 @@
 <template>
   <div>
       <code></code>
-       <p>{{ prediction.probability }}% chance to get a stroke</p>
+       <p>Stroke probability: {{ prediction.probability }}%</p>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 p{
-  font-size: 8em;
+  font-size: 3em;
 }
 
 
