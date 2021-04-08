@@ -41,9 +41,10 @@ export default {
 }
 
 .result{
-  position: absolute;
   display: inline-block;
-  margin-left: 20em;
+  line-height: 0.8;
+  margin-left: 15em;
+  width: 50%
 }
 
 
